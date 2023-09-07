@@ -26,3 +26,4 @@ INNER JOIN alunos ON alunos.id = matriculas.aluno_id GROUP BY matriculas.curso;
 SELECT produto, ROUND(AVG(receita)) AS media_receita FROM vendas GROUP BY id;
 
 
+SELECT produto, SUM(receita) AS totalreceita FROM vendas GROUP BY produto HAVING SUM(receita) > 10000;
