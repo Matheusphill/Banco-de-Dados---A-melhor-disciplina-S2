@@ -34,3 +34,6 @@ GROUP BY autores.id, autores.nome HAVING COUNT(livros.id) >= 2;
 
 
 SELECT  livros.titulo, autores.nome AS Nome_autor FROM livros INNER JOIN autores ON livros.autor_id = autores.id;
+
+
+SELECT alunos.nome, matriculas.curso FROM alunos INNER JOIN matriculas ON alunos.id = matriculas.aluno_id;
