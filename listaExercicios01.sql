@@ -19,6 +19,7 @@ Select nome, COUNT(autor_id) AS totalivros FROM autores
 INNER JOIN livros ON autores.id = livros.autor_id GROUP BY nome;
 
 
-
+SELECT matriculas.curso, COUNT(alunos.id) AS quant_aluno FROM matriculas 
+INNER JOIN alunos ON alunos.id = matriculas.aluno_id GROUP BY matriculas.curso;
 
 
