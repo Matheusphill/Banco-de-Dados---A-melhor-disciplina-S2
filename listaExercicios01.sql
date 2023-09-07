@@ -31,3 +31,6 @@ SELECT produto, SUM(receita) AS totalreceita FROM vendas GROUP BY produto HAVING
 
 SELECT autores.nome FROM autores INNER JOIN livros ON autores.id = livros.autor_id
 GROUP BY autores.id, autores.nome HAVING COUNT(livros.id) >= 2;
+
+
+SELECT  livros.titulo, autores.nome AS Nome_autor FROM livros INNER JOIN autores ON livros.autor_id = autores.id;
