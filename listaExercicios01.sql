@@ -23,3 +23,6 @@ SELECT matriculas.curso, COUNT(alunos.id) AS quant_aluno FROM matriculas
 INNER JOIN alunos ON alunos.id = matriculas.aluno_id GROUP BY matriculas.curso;
 
 
+SELECT produto, ROUND(AVG(receita)) AS media_receita FROM vendas GROUP BY id;
+
+
