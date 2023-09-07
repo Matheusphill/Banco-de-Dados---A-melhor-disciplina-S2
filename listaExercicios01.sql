@@ -27,3 +27,7 @@ SELECT produto, ROUND(AVG(receita)) AS media_receita FROM vendas GROUP BY id;
 
 
 SELECT produto, SUM(receita) AS totalreceita FROM vendas GROUP BY produto HAVING SUM(receita) > 10000;
+
+
+SELECT autores.nome FROM autores INNER JOIN livros ON autores.id = livros.autor_id
+GROUP BY autores.id, autores.nome HAVING COUNT(livros.id) >= 2;
