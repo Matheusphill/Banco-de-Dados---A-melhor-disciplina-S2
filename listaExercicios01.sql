@@ -51,3 +51,7 @@ SELECT alunos.nome, matriculas.curso FROM alunos INNER JOIN matriculas ON alunos
 SELECT autores.nome, COUNT(livros.id) AS quant_livros FROM autores 
 INNER JOIN livros ON autores.id = livros.autor_id GROUP BY autores.id, autores.nome  
 ORDER BY quant_livros DESC LIMIT 1;
+
+
+SELECT produto, SUM(receita) AS totalreceita FROM vendas GROUP BY produto 
+ORDER BY total_receita ASC LIMIT 1;
