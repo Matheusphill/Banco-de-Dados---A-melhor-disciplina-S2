@@ -37,3 +37,6 @@ SELECT  livros.titulo, autores.nome AS Nome_autor FROM livros INNER JOIN autores
 
 
 SELECT alunos.nome, matriculas.curso FROM alunos INNER JOIN matriculas ON alunos.id = matriculas.aluno_id;
+
+
+SELECT autores.nome AS Nome_autor, livros.titulo FROM livros LEFT JOIN autores ON livros.autor_id = autores.id;
