@@ -61,3 +61,4 @@ SELECT alunos.nome, COUNT(matriculas.id) AS totalmatri FROM alunos
 LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id GROUP BY alunos.nome;
 
 
+SELECT produto, COUNT(produto) AS num_vendas FROM vendas GROUP BY produto;
