@@ -55,3 +55,9 @@ ORDER BY quant_livros DESC LIMIT 1;
 
 SELECT produto, SUM(receita) AS totalreceita FROM vendas GROUP BY produto 
 ORDER BY total_receita ASC LIMIT 1;
+
+
+SELECT alunos.nome, COUNT(matriculas.id) AS totalmatri FROM alunos
+LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id GROUP BY alunos.nome;
+
+
